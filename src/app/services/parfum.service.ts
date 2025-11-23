@@ -2,6 +2,7 @@
 import { Parfum } from '../model/parfum.model';
 import { Genre } from '../model/genre.model';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn:'root'
 })
@@ -64,4 +65,12 @@ rechercherParGenre(idGen: number):Parfum[] {
   });
   return this.parfumRechercher;
  }
+ ajouterGenre(gen: Genre) {
+  const index = this.genres.findIndex(gen => gen.idGen === gen.idGen);
+
+  // كان لقيناه (index != -1)
+  if (index !== -1) {
+    this.genres[index] = gen;   // ⚡ هنا التبديل الصحيح
+  }
+}
 }

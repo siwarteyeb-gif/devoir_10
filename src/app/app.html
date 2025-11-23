@@ -35,6 +35,7 @@
             <li><a class="dropdown-item" routerLink="/parfums">Lister</a>
             </li><li><a class="dropdown-item" routerLink="/rechercheParGenre">Recherche Par Genre</a>
             </li><li><a class="dropdown-item" routerLink="/rechercheParNom">Recherche Par Nom</a>
+             <li> <a class="dropdown-item" routerLink="/listeCategories" >Gestion des Genres</a></li>
           </ul>
         </li>
       </ul>
@@ -55,7 +56,7 @@
             @if(!authService.isloggedIn){
             <li><a class="dropdown-item" routerLink="/login">Login</a></li>}
             @else {
-            <li><a class="dropdown-item" href="#">Logout</a></li>}
+            <li><a class="dropdown-item" href="#" routerLink="/logout">Logout</a></li>}
             <li><a class="dropdown-item" href="#">Profile</a></li>
           </ul>
         </li>
